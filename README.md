@@ -61,7 +61,7 @@ Pull or merge requests to update translations are especially welcome
 ## Installation
 ### KDE Store/Pling:
 
-[https://store.kde.org/p/2281196](https://store.kde.org/p/2281196)
+[https://store.kde.org/p/2360730/](https://store.kde.org/p/2360730/)
 
 ### Discover:
 
@@ -72,15 +72,15 @@ The OpenWeatherMap provider now uses the JSON API instead of the XML API, removi
 
 #### GitHub CLI:
 
-`git clone https://github.com/tully-t/weather-widget-plus`
+`git clone https://github.com/ranjithsiji/weather-widget-plus-j`
 
-`cd weather-widget-plus`
+`cd weather-widget-plus-j`
 
 `cp -r weather.widget.plus/ ~/.local/share/plasma/plasmoids/weather.widget.plus`
 
 #### GitHub GUI:
 
-- Download and extract weather-widget-plus.zip
+- Download and extract weather-widget-plus-j.zip
 
 then
 
@@ -100,8 +100,8 @@ The integrated Met.no search function may return in the future. For now, use [Ge
 
 The OpenWeatherMap provider previously depended on `QtQml.XmlListModel`, which is not available in all Plasma 6 installations and caused the following error:
 ```
-file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/main.qml:55:5: Type OpenWeatherMap unavailable 
-file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/providers/OpenWeatherMap.qml:18:1: module "QtQml.XmlListModel" is not installed
+file:///~/.local/share/plasma/plasmoids/weather.widget.plus-j/contents/ui/main.qml:55:5: Type OpenWeatherMap unavailable 
+file:///~/.local/share/plasma/plasmoids/weather.widget.plus-j/contents/ui/providers/OpenWeatherMap.qml:18:1: module "QtQml.XmlListModel" is not installed
 ```
 
 ### Contributing
