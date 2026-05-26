@@ -1,4 +1,4 @@
-# Weather Widget Plus
+# Weather Widget Plus-J
 
 ![Collage of Weather Widget Plus layouts](preview/collage-3.png)
 
@@ -90,17 +90,13 @@ As a System Tray entry, Weather Widget Plus may only respond to Location changes
 ## Notes
 The integrated Met.no search function may return in the future. For now, use [Geonames.org](https://www.geonames.org/) to find the latitude, longitude, and altitude for your location.
 
-With an update from Plasma 5 to Plasma 6, users may encounter the following error:
+The OpenWeatherMap provider previously depended on `QtQml.XmlListModel`, which is not available in all Plasma 6 installations and caused the following error:
 ```
 file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/main.qml:55:5: Type OpenWeatherMap unavailable 
 file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/providers/OpenWeatherMap.qml:18:1: module "QtQml.XmlListModel" is not installed
 ```
 
-The missing package is [qml6-module-qtqml-xmllistmodel](https://packages.debian.org/sid/qml6-module-qtqml-xmllistmodel) (Debian) / [qt5-xmlpatterns](https://archlinux.org/packages/extra/x86_64/qt5-xmlpatterns/) (Arch) / [qt5-qtxmlpatterns](https://packages.fedoraproject.org/pkgs/qt5-qtxmlpatterns/qt5-qtxmlpatterns/) (Fedora). Installation instructions for this package are below: 
-Debian: $ sudo apt install qml6-module-qtqml-xmllistmodel 
-Arch Linux: $ sudo pacman -S qt5-declarative $ sudo pacman -S qt5-xmlpatterns 
-Fedora: $ sudo dnf install qt5-qtxmlpatterns 
-After installation, restart or log out and log back in.
+This has been fixed. The OpenWeatherMap provider now uses the JSON API instead of the XML API, removing the `QtQml.XmlListModel` dependency entirely. Update to the latest version to resolve this error.
 
 ### Contributing
 Start a discussion to propose new features or ask questions!
