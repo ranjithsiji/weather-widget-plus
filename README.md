@@ -4,10 +4,11 @@
 
 Weather Widget Plus-J features a meteogram and extensive customization options. Data from OpenWeather and the Norwegian Meteorological Institute.
 
-Weather Widget Plus-J and an updated version of [Weather Widget Plus](https://github.com/tully-t/weather-widget-plus) is a plasmoid for KDE, and a fork of blackadderkate's [weather-widget-2](https://store.kde.org/p/1683743/), which was based on [plasma-applet-weather-widget](https://store.kde.org/p/998917) by Kotelnik/clearmartin.
+Weather Widget Plus-J is an updated version of [Weather Widget Plus](https://github.com/tully-t/weather-widget-plus) is a plasmoid for KDE, and a fork of blackadderkate's [weather-widget-2](https://store.kde.org/p/1683743/), which was based on [plasma-applet-weather-widget](https://store.kde.org/p/998917) by Kotelnik/clearmartin.
 
 ### What is changed
 - The OpenWeatherMap provider now uses the JSON API instead of the XML API
+- No extra package requred to get the data. JSON is a modern data transportation format.
 - Why another version than pull request : The file largerly modified. I am using LLM to write the code. So this code is written by me with the help of LLM.
 
 Weather Widget Plus has vastly expanded appearance and layout settings and implements fixes for all open issues and pull requests of Weather Widget 2, so you can configure a pixel-perfect plasmoid for your panel. 
