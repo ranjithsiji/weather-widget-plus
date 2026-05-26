@@ -2,9 +2,13 @@
 
 ![Collage of Weather Widget Plus layouts](preview/collage-3.png)
 
-Weather Widget Plus features a meteogram and extensive customization options. Data from OpenWeather and the Norwegian Meteorological Institute.
+Weather Widget Plus-J features a meteogram and extensive customization options. Data from OpenWeather and the Norwegian Meteorological Institute.
 
-Weather Widget Plus is a plasmoid for KDE, and a fork of blackadderkate's [weather-widget-2](https://store.kde.org/p/1683743/), which was based on [plasma-applet-weather-widget](https://store.kde.org/p/998917) by Kotelnik/clearmartin.
+Weather Widget Plus-J and an updated version of [Weather Widget Plus](https://github.com/tully-t/weather-widget-plus) is a plasmoid for KDE, and a fork of blackadderkate's [weather-widget-2](https://store.kde.org/p/1683743/), which was based on [plasma-applet-weather-widget](https://store.kde.org/p/998917) by Kotelnik/clearmartin.
+
+### What is changed
+- The OpenWeatherMap provider now uses the JSON API instead of the XML API
+- Why another version than pull request : The file largerly modified. I am using LLM to write the code. So this code is written by me with the help of LLM.
 
 Weather Widget Plus has vastly expanded appearance and layout settings and implements fixes for all open issues and pull requests of Weather Widget 2, so you can configure a pixel-perfect plasmoid for your panel. 
 
@@ -62,6 +66,9 @@ Pull or merge requests to update translations are especially welcome
 
 Right click on the panel/desktop -> Add or Manage Widgets... -> Get New... -> Download New Plasma Widgets -> Search for Weather Widget Plus -> Download -> Add to a panel or the desktop
 
+### Fixed the use of XML with Json
+The OpenWeatherMap provider now uses the JSON API instead of the XML API, removing the `QtQml.XmlListModel` dependency entirely. Update to the latest version to resolve this error.
+
 #### GitHub CLI:
 
 `git clone https://github.com/tully-t/weather-widget-plus`
@@ -96,8 +103,6 @@ file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/main.qml
 file:///~/.local/share/plasma/plasmoids/weather.widget.plus/contents/ui/providers/OpenWeatherMap.qml:18:1: module "QtQml.XmlListModel" is not installed
 ```
 
-This has been fixed. The OpenWeatherMap provider now uses the JSON API instead of the XML API, removing the `QtQml.XmlListModel` dependency entirely. Update to the latest version to resolve this error.
-
 ### Contributing
 Start a discussion to propose new features or ask questions!
 
@@ -107,14 +112,13 @@ Pull requests are appreciated.
 
 ### Policy on LLM usage
 
-Disclosure of LLM usage in commits and pull requests is required. Contributions free of LLM output are encouraged. Poor-quality contributions will not be merged.
+Disclosure of LLM usage in commits and pull requests is required.  Poor-quality contributions will not be merged.
 
-The lead developer of Weather Widget Plus (tully-t) codes without the interference of an LLM.
 
 ### License
 
 This project is licensed under the GNU GPL v2 - see the [LICENSE.md](LICENSE.md) file for details.
 
 ### Acknowledgements
-As noted in the intro, this plasmoid is a fork of [Weather Widget 2](https://github.com/blackadderkate/weather-widget-2) by [blackadderkate](https://github.com/blackadderkate) which is based on [Weather Widget](https://github.com/kotelnik/plasma-applet-weather-widget) by [Kotelnik](https://github.com/kotelnik).
+As noted in the intro, this plasmoid is a fork of [Weather Widget Plus](https://github.com/tully-t/weather-widget-plus) which was a fork of [Weather Widget 2](https://github.com/blackadderkate/weather-widget-2) by [blackadderkate](https://github.com/blackadderkate) which is based on [Weather Widget](https://github.com/kotelnik/plasma-applet-weather-widget) by [Kotelnik](https://github.com/kotelnik).
 
